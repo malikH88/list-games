@@ -21,7 +21,7 @@ class GameList extends React.Component {
 
   render() {
     return (
-      this.state.games.map((game) => <Game />)
+      this.state.games.map((game) => <Game data={game} />)
     )
   }
 }
