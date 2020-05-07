@@ -21,7 +21,9 @@ class GameList extends React.Component {
 
   render() {
     return (
-      this.state.games.map((game) => <Game data={game} />)
+      this.state.games.map((game) => <Game data={game} deleteGame={() => {
+        this.setState({games: this.state.games.filter((toFilter) => toFilter.id !== game.id)});
+      }} />)
     )
   }
 }
